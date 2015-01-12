@@ -18,6 +18,8 @@ ADD sshd_config /etc/ssh/sshd_config
 VOLUME ["/data"]
 VOLUME ["/etc/ssh/keys"]
 
+RUN chown -R root:root /etc/ssh/keys
+
 EXPOSE 22
 
 ENTRYPOINT ["/bin/bash", "/usr/local/bin/start.sh"]
