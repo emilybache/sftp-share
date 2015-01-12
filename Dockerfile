@@ -2,10 +2,8 @@ FROM ubuntu:14.04
 
 MAINTAINER Emily Bache
 
-# can be overriden when you start the docker container
+# should be overriden when you start the docker container
 ENV USER share
-
-# must be set when you start the docker container
 ENV PASS changeme
 
 RUN apt-get update && \
@@ -17,8 +15,6 @@ ADD sshd_config /etc/ssh/sshd_config
 
 VOLUME ["/data"]
 VOLUME ["/etc/ssh/keys"]
-
-RUN chown -R root:root /etc/ssh/keys
 
 EXPOSE 22
 
