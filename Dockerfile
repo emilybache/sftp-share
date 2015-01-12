@@ -16,7 +16,7 @@ ADD start.sh /usr/local/bin/start.sh
 ADD sshd_config /etc/ssh/sshd_config
 
 VOLUME ["/data"]
-VOLUME ["/etc/ssh"]
+VOLUME ["/etc/ssh/keys"]
 
 EXPOSE 22
 
