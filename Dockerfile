@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Emily Bache emily@bacheconsulting.com
+MAINTAINER Emily Bache
 
 # can be overriden when you start the docker container
 ENV USER share
