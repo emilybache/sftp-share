@@ -9,7 +9,4 @@ fi
 
 useradd -d /data -m -p ${ENC_PASS} -u 1000 -s /bin/sh ${USER}
 
-echo $PUBLIC_SERVER_HOST_KEY > /etc/ssh/ssh_host_rsa_key.pub
-echo $PRIVATE_SERVER_HOST_KEY > /etc/ssh/ssh_host_rsa_key
-
 exec /usr/sbin/sshd -D
