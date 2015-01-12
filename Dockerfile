@@ -1,8 +1,14 @@
 FROM ubuntu:14.04
-MAINTAINER Knut Ahlers <knut@ahlers.me>
 
+MAINTAINER Emily Bache emily@bacheconsulting.com
+
+# can be overriden when you start the docker container
 ENV USER share
+
+# must be set when you start the docker container
 ENV PASS changeme
+ENV PUBLIC_SERVER_HOST_KEY  = changeme
+ENV PRIVATE_SERVER_HOST_KEY = changeme
 
 RUN apt-get update && \
     apt-get install -y openssh-server mcrypt && \
@@ -15,3 +21,4 @@ VOLUME ["/data"]
 EXPOSE 22
 
 ENTRYPOINT ["/bin/bash", "/usr/local/bin/start.sh"]
+
