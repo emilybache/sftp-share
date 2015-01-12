@@ -7,8 +7,8 @@ ENV USER share
 
 # must be set when you start the docker container
 ENV PASS changeme
-ENV PUBLIC_SERVER_HOST_KEY
-ENV PRIVATE_SERVER_HOST_KEY
+ENV PUBLIC_SERVER_HOST_KEY changeme
+ENV PRIVATE_SERVER_HOST_KEY changeme
 
 RUN apt-get update && \
     apt-get install -y openssh-server mcrypt && \
